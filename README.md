@@ -1,16 +1,36 @@
-# Enfold-Layout
+# Enfold-inspired portfolio layout
 
-Static Enfold-inspired website layout study.
+![Desktop preview](docs/preview.jpg)
 
-**Status:** Experimental / portfolio project. Not production-ready.
+An HTML/CSS portfolio layout study with bundled photography, icons and Open Sans / Bad Script fonts.
 
-## Getting started
-Open `index.html` in a browser (or use a local static web server).
+## Run locally
 
-## Notes
-Do not use demo authentication, sample data, payment or admin UI as a production service without a security review.
+Requires Python 3 for the optional static server. From this repository folder:
 
-## Portfolio source
-This repository contains the project source for local use and review. GitHub Pages deployment is optional. Some features may require a local development server or external dependencies.
+```bash
+python -m http.server 8000
+```
 
-**Note:** This is a learning / portfolio project, not a production-ready service.
+Open http://localhost:8000. No deployment is required.
+
+## Repository structure
+
+- `index.html` — page markup
+- `css/css p.css` — original stylesheet path
+- `script.js` — mobile menu and local form feedback
+- `images/` and `icons/` — artwork
+- `fonts/` — bundled fonts and their OFL notices
+- `docs/` — import provenance and review notes
+
+## Scope and dependencies
+
+Navigation and contact controls validate the form locally. No message delivery service is included. Enfold branding and artwork belong to their respective owners; font license notices are preserved.
+
+## Validation
+
+Local HTML/CSS asset references and JavaScript syntax are checked during the import. See `docs/VALIDATION.md` for the actual results and limits. CI is defined in `.github/workflows/quality.yml`.
+
+## Source preservation
+
+All original project files were imported in a separate Git commit before changes. `docs/ORIGINAL_FILES.sha256` lists the archive file checksums. Existing images, fonts and notices are retained. No repository-wide license grant has been added.
